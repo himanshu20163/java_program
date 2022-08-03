@@ -1,5 +1,5 @@
 import java.util.*;
-public class substring_find {
+public class substring_and_char_find {
  public static Scanner scn = new Scanner(System.in);
     public static void test3() {
         String str = "abcdefghi";
