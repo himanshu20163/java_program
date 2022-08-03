@@ -22,7 +22,7 @@ public class String_Stringbuilder {
         
     }
     public static void main(String[] args) {
-        string_test();
+        //string_test();
         //stringbuilder_test();
     }
     
