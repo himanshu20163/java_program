@@ -17,6 +17,5 @@ public class upper_lower_count {
         String str = scn.nextLine();
         int ans = Upper_string(str);
         System.out.println(ans);
-
     }
 }
