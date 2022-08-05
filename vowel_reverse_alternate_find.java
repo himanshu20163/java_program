@@ -1,5 +1,5 @@
 import java.util.*; 
-public class vowel_find {
+public class vowel_reverse_alternate_find {
 
     public static Scanner scn = new Scanner(System.in);
     
