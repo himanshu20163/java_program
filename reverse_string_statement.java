@@ -69,25 +69,23 @@ public class reverse_string_statement {
     }
 
     public static String reverse_1(String str){//bcaabab
-        int[] freqarray=new int[128];//frequency create array
+        int[] frearr= new int[128];
         StringBuilder sb = new StringBuilder();
-        int n=str.length();// string length
-        for(int i=0;i<n;i++){//string length times loop
-            char ch = str.charAt(i);//one by one charcter get to ch variable 
-            freqarray[ch]=freqarray[ch]+1;//index value store times of i
+        int ans = str.length();
+        for(int i=0;i<ans;i++){
+            char ch = str.charAt(i);
+            frearr[ch]=frearr[ch]+1;
         }
-        for(int i=0;i<128;i++){//128 times loops
-            if(freqarray[i]>0){//ascii value check greater than zero
-                sb.append(make_string((char)i,freqarray[i]));//append make_string ch and i times value 
-            }//aaabbbc
+        for(int i=0;i<128;i++){
+            sb.append(make_string((char)i,frearr[i]));//char 65 , frearr[65]-> A 2
         }
-        return sb.toString();// return the value 
+        return sb.toString();
     }
     public static void main(String[] args) {
         String str = scn.nextLine();
-        String ans = Reverse_Statement(str);
-        String ans1 = reverse_String(str);
-        System.out.print(ans);
+       // String ans = Reverse_Statement(str);
+        String ans1 = reverse_1(str);
+        //System.out.print(ans);
         System.out.print(ans1);
         }   
 }
