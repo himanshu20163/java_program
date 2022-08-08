@@ -12,6 +12,15 @@ public class anagram {
           return sb.toString();
     }
 
+    public static String make_string1(char ch, int i){
+        //create stringBuilder and repeat string add
+        StringBuilder sb = new StringBuilder();
+        while(i--<0){
+          sb.append(ch);
+        }
+        return sb.toString();
+    }
+
     public static String sortString(String str){
        //1.array create 128 size
        //2.array store 0 and 1
@@ -50,14 +59,27 @@ public class anagram {
         }
         return true;
     }
+    public static String removeAllDuplicates(String str) {
+        int[] arr = new int[128];
+       for(int i=0;i<str.length();i++){
+          arr[str.charAt(i)]++;
+       }
+       StringBuilder sb = new StringBuilder();
+       for(int i=0;i<128;i++){
+          if(arr[i]>0){
+            sb.append(make_string1((char) i , arr[i]));
+          }
+       }
+       return sb.toString();
+    }
     public static void main(String[] args) {
-    //    String ans = "himanshusahu";
-    //    String ans1= sortString(ans);
-    //    System.out.print(ans1);
-          String s1 = scn.nextLine();
-          String s2 = scn.nextLine();
-          //Boolean ans = iequals(s1,s2);
-          Boolean ans1 = anagram(s1,s2);
-          System.out.println(ans1);
+        String ans = "himanshusahu";
+         String ans1= removeAllDuplicates(ans);
+          System.out.print(ans1);
+        //   String s1 = scn.nextLine();
+        //   String s2 = scn.nextLine();
+        //   //Boolean ans = iequals(s1,s2);
+        //   Boolean ans1 = anagram(s1,s2);
+        //   System.out.println(ans1);
     }
 }
